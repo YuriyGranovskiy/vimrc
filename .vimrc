@@ -1,4 +1,4 @@
-execute pathogen#infect()
+execute pathogen#infect()	
 
 " Setting up vim-plug as the package manager {{{
 if !filereadable(expand("~/vimfiles/autoload/plug.vim"))
@@ -51,7 +51,11 @@ set number
 set fileformat=dos
 set tabstop=4
 
-#set term=xterm
+" Turn off any bells
+set novisualbell
+set t_vb=
+
+"set term=xterm
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -64,12 +68,9 @@ set laststatus=2
 
 " Mapping {{{
  nnoremap <C-s> :w<CR>
- nnoremap <C-S-Right> <c-w>l
- nnoremap <C-S-Left> <c-w>h
- nnoremap <C-S-Up> <c-w>k
- nnoremap <C-S-Down> <c-w>j
 "}}}
-" Mapping {{{
+
+" NERDTree settings {{{
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "*",
